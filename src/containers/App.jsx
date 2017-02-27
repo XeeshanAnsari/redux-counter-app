@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
-import App from '../components/App.jsx'
+import Counter from '../components/Counter.jsx'
+import React ,{ Component } from 'react';
+
 
 
 
@@ -15,9 +17,17 @@ function mapDispatchToProps(dispatch){
 
     }
 }
+class App extends Component {
+    render(){
+        return(
+            <div>
+              <Counter />
+            </div>
+        )
+    }
+}
+ 
 
-const connect = connect(mapStateToProps ,mapDispatchToProps)(App)
 
-
-export default connect;
+export default connect(mapStateToProps ,mapDispatchToProps)(App)
 
