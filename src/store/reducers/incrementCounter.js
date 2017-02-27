@@ -11,6 +11,8 @@ function incrementCounter(state = INITIAL_STATE , action) {
     switch(action.type) {
         case CounterAction.INCREMENT:
             return Object.assign({}, state, { incrementState : state.incrementState + 1 });
+        case CounterAction.INCREMENT_WITH_VALUE:
+          return Object.assign({}, state , {incrementState: state.incrementState + action.val})    
         default:
             return state;
     }
