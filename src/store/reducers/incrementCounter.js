@@ -12,7 +12,7 @@ function incrementCounter(state = INITIAL_STATE , action) {
         case CounterAction.INCREMENT:
             return Object.assign({}, state, { incrementState : state.incrementState + 1 });
         default:
-           state;
+            return state;
     }
     
 }

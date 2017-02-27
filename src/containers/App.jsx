@@ -26,6 +26,7 @@ class App extends Component {
         return(
             <div>
               <Counter counter={this.props.incCounter} update={this.props.increment} />
+              
             </div>
         )
     }
