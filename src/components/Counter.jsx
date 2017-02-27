@@ -1,4 +1,5 @@
 import React ,{ Component } from 'react';
+import  App from '../containers/App'
 
 
 
@@ -21,8 +22,12 @@ class Counter extends Component{
     decrement() {
         this.props.decrement();
     }
-    updateCounterWithInput(){
-        this.props.update(this.state.counterVal)
+    incUpdateCounterWithInput(){
+        this.props.incrementUpdate (this.state.counterVal)
+
+    }
+     decUpdateCounterWithInput(){
+        this.props.decrementUpdate (this.state.counterVal)
 
     }
 
@@ -32,9 +37,10 @@ class Counter extends Component{
     render(){
         return (
             <div>
-             <h2>Counter :{this.props.counter }</h2>
+             <h2>Counter : {this.props.counter }</h2>
               <input type="number" onChange={this.valueChange.bind(this)}/>
-              <button onClick={this.updateCounterWithInput.bind(this)} >Update Counter with Input</button>
+              <button onClick={this.incUpdateCounterWithInput.bind(this)} > Increment Update Counter with Input</button>
+              <button onClick={this.decUpdateCounterWithInput.bind(this)} >Decrement Update Counter with Input</button>
               <button onClick={this.increment.bind(this)} >Increment 1 Time</button>
               <button onClick={this.decrement.bind(this)} >Decrement 1 Time</button>
               
